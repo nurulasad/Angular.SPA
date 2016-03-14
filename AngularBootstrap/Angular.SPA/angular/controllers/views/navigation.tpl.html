@@ -1,0 +1,16 @@
+﻿<nav class="navbar navbar-default" ng-controller="navigationController">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+           
+
+            <li class="{{tab.selectedClass}}" ng-repeat="tab in tabs">
+                <a   href="#"  ng-click="onClickTab(tab)">
+                    <span ui-sref="{{tab.name}}">{{tab.text}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

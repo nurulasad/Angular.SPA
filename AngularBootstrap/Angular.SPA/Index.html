@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="spaApp">
+<head>
+    <title>Precision Calibration Services</title>
+
+    <!--Minified combined js-->
+    <!--<script src="angular/combined-99.min.js"></script>-->
+    <!--AngularJS and off the shelf components-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- required for date picker control-->
+
+
+
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+
+
+
+    <!--main app-->
+    <script src="angular/app.js"></script>
+
+    <script src="angular/controllers/navigationController.js"></script>
+
+    <!--Services-->
+    <script src="angular/services/constantService.js"></script>
+
+    <!--Interceptors-->
+    <script src="angular/interceptors/loadingInterceptor.js"></script>
+
+
+    <!--filters -->
+    <!--Directives custom-->
+    <!--Navigation module-->
+    <!--Style sheets-->
+
+    <link href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+    <!--Style sheets from project -->
+  
+
+
+</head>
+<body>
+    <div class="loading">
+        <div id="circularG">
+            <div id="circularG_1" class="circularG"></div>
+            <div id="circularG_2" class="circularG"></div>
+            <div id="circularG_3" class="circularG"></div>
+            <div id="circularG_4" class="circularG"></div>
+            <div id="circularG_5" class="circularG"></div>
+            <div id="circularG_6" class="circularG"></div>
+            <div id="circularG_7" class="circularG"></div>
+            <div id="circularG_8" class="circularG"></div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="header">
+            
+
+            <div ng-include="'angular/controllers/views/navigation.tpl.html'"></div>
+
+            <div class="nav-block"></div>
+        </div>
+        <div id="main">
+            <div class="main-holder row">
+                <div class="col-md-12">
+                   <h1>Home</h1>
+                </div>
+                <p class="content" ui-view>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-holder">
+           
+        </div>
+    </div>
+</body>
+</html>
