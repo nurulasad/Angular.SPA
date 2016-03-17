@@ -1,22 +1,16 @@
 ﻿(function () {
-    angular.module("spaApp", ['ui.router', 'ngStorage'])
-    .config(["$stateProvider", appStateProvider])
-    .run(['$state', '$rootScope', function ($state, $rootScope) {
-        $state.transitionTo('home');
-        $rootScope.Success = false;
-    }]
-    ).controller('mainCtrl', ['$scope', function ($scope) {
-        $scope.message = "Spa Application";
-    }])
+    angular.module("spaApp", ['ui.router', 'ngRoute','ngStorage'])
+    .config(["$routeProvider", appStateProvider])
+    
 
-    function appStateProvider($stateProvider) {
+    function appStateProvider($routeProvider) {
 
-        $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'angular/controllers/views/home.tpl.html'
-            });
-            
-            
+        $routeProvider
+          .when('/', {
+              templateUrl: 'angular/controllers/views/home.tpl.html',
+              controller: 'mainController'
+          })
+          .otherwise({ redirectTo: '/' });
     }
+
 })();

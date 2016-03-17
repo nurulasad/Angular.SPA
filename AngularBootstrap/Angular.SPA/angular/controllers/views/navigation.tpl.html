@@ -5,10 +5,9 @@
         </div>
         <ul class="nav navbar-nav">
            
-
             <li class="{{tab.selectedClass}}" ng-repeat="tab in tabs">
-                <a   href="#"  ng-click="onClickTab(tab)">
-                    <span ui-sref="{{tab.name}}">{{tab.text}}</span>
+                <a   href="#/{{tab.name}}"  ng-click="onClickTab(tab)">
+                    {{tab.text}}
                 </a>
             </li>
         </ul>
