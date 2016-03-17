@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='scripts, minify-css' />
+/// <binding />
 // include plug-ins
 var gulp = require('gulp');
 var concat = require('gulp-concat');
