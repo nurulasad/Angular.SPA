@@ -5,8 +5,6 @@
 
     function mainController($scope, $rootScope) {
         var vm = $scope;
-
-        $scope.message = 'Everyone come and see how good I look!';
         
     };
 

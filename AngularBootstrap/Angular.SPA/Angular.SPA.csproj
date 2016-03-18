@@ -67,7 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="angular\controllers\mainController.js" />
+    <Content Include="angular\controllers\animalController.js" />
     <Content Include="angular\controllers\views\home.tpl.html" />
+    <Content Include="angular\controllers\views\animal.tpl.html" />
     <Content Include="angular\services\constantService.js" />
     <Content Include="packages.config" />
     <Content Include="bower.json" />

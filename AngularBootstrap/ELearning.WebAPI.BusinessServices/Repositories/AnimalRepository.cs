@@ -32,6 +32,25 @@ namespace ELearning.BusinessServices.Repositories
             return data.Animals;
         }
 
+        public List<Item> GetItems()
+        {
+            var items = new List<Item>();
+
+            var item = new Item();
+            item.Image = "lion";
+            item.Name = "Lion";
+            item.Code = "lion";
+
+            item.Answers.Add(new Answer() { Code = "lion", Text = "Lion" });
+            item.Answers.Add(new Answer() { Code = "horse", Text = "Horse" });
+
+            items.Add(item);
+
+
+
+            return items;
+        }
+
         public Animal GetById(int id)
         {
             return data.Animals.Where(x => x.AnimalId == id).SingleOrDefault();

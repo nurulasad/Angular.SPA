@@ -1,9 +1,9 @@
 ﻿(function () {
 
     angular.module('spaApp')
-    .controller('navigationController', ["$scope", "$rootScope", "$sessionStorage", "constantService", navigationController]);
+    .controller('navigationController', ["$scope", "$rootScope", "$sessionStorage","$location", "constantService", navigationController]);
 
-    function navigationController($scope, $rootScope, $sessionStorage, constantService) {
+    function navigationController($scope, $rootScope, $sessionStorage, $location, constantService) {
         var vm = $scope;
         vm.storage = $sessionStorage;
 

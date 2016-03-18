@@ -9,7 +9,7 @@
 
         pub.Tabs = [
            { "name": "home", "text": "Home" },
-           { "name": "parts", "text": "Parts" }
+           { "name": "animal", "text": "Animal Quiz" }
         ];
 
         pub.findNavigationByName = function (tab) {

@@ -27,6 +27,7 @@
 
     <script src="angular/controllers/navigationController.js"></script>
     <script src="angular/controllers/mainController.js"></script>
+    <script src="angular/controllers/animalController.js"></script>
 
     <!--Services-->
     <script src="angular/services/constantService.js"></script>
@@ -66,8 +67,20 @@
 
     <div ng-include="'angular/controllers/views/navigation.tpl.html'"></div>
 
+    <div class="row">
+        <div class="col-md-2">
+            <p>Left Panel</p>
+        </div>
+        <div class="col-md-8">
+            <div ng-view></div>
+        </div>
+
+        <div class="col-md-2">
+            <p>Right Panel</p>
+        </div>
+    </div>
     
-    <div ng-view></div>
+    
     
 
     <div class="container">

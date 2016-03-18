@@ -1,7 +1,7 @@
 ﻿(function () {
-    angular.module("spaApp", ['ui.router', 'ngRoute','ngStorage'])
+    angular.module("spaApp", ['ui.router', 'ngRoute', 'ngStorage'])
     .config(["$routeProvider", appStateProvider])
-    
+
 
     function appStateProvider($routeProvider) {
 
@@ -10,7 +10,15 @@
               templateUrl: 'angular/controllers/views/home.tpl.html',
               controller: 'mainController'
           })
-          .otherwise({ redirectTo: '/' });
+            .when('/home', {
+                templateUrl: 'angular/controllers/views/home.tpl.html',
+                controller: 'mainController'
+            })
+          .when('/animal', {
+                templateUrl: 'angular/controllers/views/animal.tpl.html',
+                controller: 'animalController'
+           })
+          .otherwise({ redirectTo: '/notfound' });
     }
 
 })();
