@@ -1,6 +1,6 @@
 ﻿namespace ELearning.BusinessServices
 {
-    public static class PCSExtension
+    public static class Extensions
     {
         
 
