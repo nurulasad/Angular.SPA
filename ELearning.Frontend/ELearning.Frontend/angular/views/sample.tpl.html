@@ -1,0 +1,88 @@
+﻿<div ng-controller="addCustomerCtrl" class="bottomMarginBig">
+    <br /><br />
+    <h2>Add customer</h2>
+    <form novalidate name="frmAddCustomer">
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Customer Name:</label></div>
+            <div class="col-md-4"><input type="Text" ng-model="customer.CustomerName" class="form-control" required="" /></div>
+        </div>
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Customer Number:</label></div>
+            <div class="col-md-4"><input type="number" ng-model="customer.CustomerNumber" class="form-control" required="" /></div>
+        </div>
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Address:</label></div>
+            <div class="col-md-4"><input type="Text" ng-model="customer.Address" class="form-control" ng-required="true" /></div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Suburb:</label></div>
+            <div class="col-md-4">
+                <select class="form-control" required="" select-required ng-model="customer.suburb">
+                    <option ng-repeat="suburb in suburbs" value="{{suburb.Id}}">{{suburb.Suburb}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Postcode:</label></div>
+            <div class="col-md-4"><input type="number" ng-model="customer.postCode" minlength="4" maxlength="4" class="form-control" ng-required="true" /></div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>State:</label></div>
+            <div class="col-md-4">
+                <select class="form-control" ng-model="customer.state" required="">
+                    <option value="ACT">ACT</option>
+                    <option value="NT">NT</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NSW">NSW</option>
+                    <option value="VIC">VIC</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="WA">WA</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Location:</label></div>
+            <div class="col-md-4">
+                <select class="form-control" required="" select-required ng-model="customer.location">
+                    <option ng-repeat="location in locations" value="{{location.Id}}">{{location.GoodsLocation}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Phone:</label></div>
+            <div class="col-md-4"><input type="Text" ng-model="customer.Phone" class="form-control" ng-required="true" /></div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Fax:</label></div>
+            <div class="col-md-4"><input type="Text" ng-model="customer.Fax" class="form-control" /></div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Email:</label></div>
+            <div class="col-md-4"><input type="email" ng-model="customer.Email" class="form-control" /></div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>Web:</label></div>
+            <div class="col-md-4"><input type="url" ng-model="customer.Web" class="form-control" /></div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>ABN:</label></div>
+            <div class="col-md-4"><input type="Text" ng-model="customer.ABN" class="form-control" /></div>
+        </div>
+
+        <div class="row spaceBelow">
+            <div class="col-md-2"><label>ACN:</label></div>
+            <div class="col-md-4"><input type="Text" ng-model="customer.ACN" class="form-control" /></div>
+        </div>
+        <div class="col-md-6"><button class="btn btn-primary pull-right" ng-click="save()">Save</button></div>
+    </form>
+</div>

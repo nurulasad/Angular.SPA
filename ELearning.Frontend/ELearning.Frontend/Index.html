@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="spaApp">
+<head>
+    <title>E Learning</title>
+
+    <!--Minified combined js-->
+    <!--<script src="angular/combined-99.min.js"></script>-->
+    <!--AngularJS and off the shelf components-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- required for date picker control-->
+
+
+
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+
+
+
+    <!--main app-->
+    <script src="angular/app.js"></script>
+
+    <script src="angular/controllers/navigationController.js"></script>
+    <script src="angular/controllers/mainController.js"></script>
+    <script src="angular/controllers/animalController.js"></script>
+
+    <!--Services-->
+    <script src="angular/services/constantService.js"></script>
+    <script src="angular/services/dataService.js"></script>
+
+    <!--Interceptors-->
+    <script src="angular/interceptors/loadingInterceptor.js"></script>
+
+
+    <!--filters -->
+    <!--Directives custom-->
+    <!--Navigation module-->
+    <!--Style sheets-->
+
+    <link href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/spa.css" rel="stylesheet" />
+
+
+    <!--Style sheets from project -->
+
+
+
+</head>
+<body>
+    <div class="loading">
+        <div id="circularG">
+            <div id="circularG_1" class="circularG"></div>
+            <div id="circularG_2" class="circularG"></div>
+            <div id="circularG_3" class="circularG"></div>
+            <div id="circularG_4" class="circularG"></div>
+            <div id="circularG_5" class="circularG"></div>
+            <div id="circularG_6" class="circularG"></div>
+            <div id="circularG_7" class="circularG"></div>
+            <div id="circularG_8" class="circularG"></div>
+        </div>
+    </div>
+
+    <div ng-include="'angular/controllers/views/navigation.tpl.html'"></div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <p>Left Panel</p>
+        </div>
+        <div class="col-md-8">
+            <div ng-view></div>
+        </div>
+
+        <div class="col-md-2">
+            <p>Right Panel</p>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © Your Website 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
