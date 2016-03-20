@@ -1,4 +1,5 @@
 using ELearning.DataModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ELearning.BusinessServices.Models
@@ -7,6 +8,7 @@ namespace ELearning.BusinessServices.Models
     [Table("Animal")]
     public class Animal : EntityBase
     {
+        [Key]
         public int AnimalID { get; set; }
 
         public int AnswerID { get; set; }
